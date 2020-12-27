@@ -1,3 +1,5 @@
+See https://danielveselka.blogspot.com/2020/12/deploy-java-ee-8-application-into-jboss.html 
+
 # Build
 mvn clean package && docker build -t com.dave/java-ee8-minimal .
 
