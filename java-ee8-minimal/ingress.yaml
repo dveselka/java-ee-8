@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: java-ee8-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /java-ee8-minimal
+        pathType: Prefix
+        backend:
+          service:
+            name: java-ee8-minimal
+            port:
+              number: 8080

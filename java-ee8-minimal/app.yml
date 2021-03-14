@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: java-ee8-minimal
+spec:
+  selector:
+    matchLabels:
+      app: java-ee8
+  replicas: 2 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: java-ee8
+    spec:
+      containers:
+      - name: java-ee8-minimal
+        image: dveselka/java-ee8-minimal
+        ports:
+        - containerPort: 8080
+
