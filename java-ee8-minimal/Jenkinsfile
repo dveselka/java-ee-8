@@ -2,7 +2,7 @@
 node {
 
         stage('Checkout') {
-          git url: 'https://github.com/dveselka/java-ee-8/', credentialsId: 'dave-devops', branch: 'master'
+          git url: 'https://github.com/dveselka/java-ee-8/', credentialsId: 'dave-devops', branch: 'main'
         }
 
         stage('Build') {
