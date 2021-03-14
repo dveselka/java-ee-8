@@ -30,7 +30,7 @@ node {
 
         stage ('Run') {
           dir('java-ee8-minimal'){
-            docker.image("com.dave/java-ee8-minimal:${env.BUILD_ID}").run('-it --name java-ee8-minimal com.dave/java-ee8-minimal')
+            docker.image("com.dave/java-ee8-minimal:${env.BUILD_ID}").run('-it --name java-ee8-minimal')
           }
         }
 }
